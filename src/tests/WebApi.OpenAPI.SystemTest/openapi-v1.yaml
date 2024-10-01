@@ -25,7 +25,7 @@ paths:
       operationId: GetExplicitOperationIdInName
       responses:
         '200':
-          description: Success
+          description: OK
   /explicitOperationIdInSwagger:
     get:
       tags:
@@ -33,7 +33,7 @@ paths:
       operationId: GetExplicitOperationIdInSwagger
       responses:
         '200':
-          description: Success
+          description: OK
   /noOperationId:
     get:
       tags:
@@ -41,7 +41,7 @@ paths:
       operationId: GetNotOperationId
       responses:
         '200':
-          description: Success
+          description: OK
   /recordClassRequiredType:
     get:
       tags:
@@ -49,7 +49,7 @@ paths:
       operationId: GetRecordClassRequiredType
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             application/json:
               schema:
@@ -61,7 +61,7 @@ paths:
       operationId: GetClassRequiredType
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             application/json:
               schema:
@@ -75,7 +75,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -103,7 +102,6 @@ paths:
         - name: id
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -130,7 +128,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -149,13 +146,12 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             application/json:
               schema:
@@ -180,7 +176,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -207,7 +202,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -230,7 +224,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -261,7 +254,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -284,7 +276,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -315,7 +306,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -332,13 +322,12 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
   /withSwaggerResponseAnnotation:
     get:
       tags:
@@ -359,7 +348,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -382,7 +370,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -413,7 +400,6 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -444,13 +430,12 @@ paths:
       parameters:
         - name: id
           in: query
-          style: form
           schema:
             type: integer
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
         '202':
           description: Accepted
           content:
@@ -489,7 +474,7 @@ paths:
         '200':
           description: OK
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
 components:
