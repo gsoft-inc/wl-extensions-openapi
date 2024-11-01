@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Workleap.Extensions.OpenAPI.Analyzers.Internals;
@@ -285,7 +285,6 @@ public class CompareTypedResultWithAnnotationAnalyzer : DiagnosticAnalyzer
                 return;
             }
 
-            var attributeLocation = attribute.ApplicationSyntaxReference.GetSyntax(context.CancellationToken).GetLocation();
             if (!methodReturnStatusCodeTypes.TryGetValue(statusCodeFromAnnotation, out var mappedType))
             {
                 return;
@@ -293,6 +292,7 @@ public class CompareTypedResultWithAnnotationAnalyzer : DiagnosticAnalyzer
 
             if (!mappedType.Any(type => SymbolEqualityComparer.Default.Equals(type, typeFromAnnotation)))
             {
+                var attributeLocation = attribute.ApplicationSyntaxReference.GetSyntax(context.CancellationToken).GetLocation();
                 context.ReportDiagnostic(AnnotationMustMatchTypedResult, attributeLocation);
             }
         }
